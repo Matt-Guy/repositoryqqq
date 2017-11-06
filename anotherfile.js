@@ -2,11 +2,11 @@ var https = require('https');
 
 function getAndPrintHTML () {
 
-  var requestOptions = {
+
+var requestOptions = {
     host: 'sytantris.github.io',
     path: '/http-examples/step2.html'
-  };
-
+};
 
 https.get(requestOptions, function (response) {
   var rawData = ''
@@ -23,12 +23,14 @@ https.get(requestOptions, function (response) {
 response.on('end', function() {
 console.log(rawData);
 
+  });
+
   // the callback is invoked when all of the data has been received
   // (the `end` of the stream
 
 });
 
   /* Add your code here */
-});
+
 }
 getAndPrintHTML();
